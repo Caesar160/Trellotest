@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿    using Newtonsoft.Json;
     namespace WebApp12_08.Models
     {
         public class Card
@@ -9,6 +9,5 @@
             public string Name { get; set; }
             [JsonProperty("desc")]
             public string Description { get; set; }
-
         }
     }

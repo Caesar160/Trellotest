@@ -13,8 +13,7 @@ namespace WebApp12_08.Controllers
     public class AtlassianController : ControllerBase {
 
         //Functionality to check your existing boards and their Id's
-
-        /*[HttpGet]
+        [HttpGet]
         public async Task<string> GetBoardsAsync(string apiKey, string apiToken)
         {
             var client = new HttpClient();
@@ -27,9 +26,9 @@ namespace WebApp12_08.Controllers
             response.EnsureSuccessStatusCode();
             var body = await response.Content.ReadAsStringAsync();
             return body;
-        }*/
+        }
 
-        //functionality to check your existing lists for the board
+        //Functionality to check your existing lists for the board
         [HttpGet]
         public async Task<string> GetListsOfBoardAsync(string apiKey, string apiToken, string boardId)
         {
@@ -46,7 +45,7 @@ namespace WebApp12_08.Controllers
         }
 
         [HttpPost]
-        public async Task<Card> MakeBoardAsync(string cardName, string cardDescription, string columnId, string apiKey, string apiToken)
+        public async Task<Card> CreateCardAsync(string cardName, string cardDescription, string columnId, string apiKey, string apiToken)
         {
             var client = new HttpClient();
             var card = new Card
